@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <table class="table table-hover" >
+            <thead>
+            </thead>
+            <tr>
+                <th></th>
+                <td>p</td>
+                <td>p</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>p</td>
+                <td>p</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>p</td>
+                <td>p</td>
+            </tr>
+    </table>
+    </div>
+</template>

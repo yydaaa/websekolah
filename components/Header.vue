@@ -46,7 +46,7 @@
       <!-- Header dengan Logo dan Informasi Sekolah -->
       <div class="row p-3 bg-dark text-white align-items-center">
         <div class="col-lg-1 text-center">
-          <img src="" alt="Logo SMKN 4 Tasikmalaya" class="img-fluid rounded">
+          <img src="../assets/img/Logo.png" alt="Logo SMKN 4 Tasikmalaya" class="img-fluid rounded">
         </div>
         <div class="col-lg-11">
           <h1 class="mb-0">SMKN 4 Tasikmalaya</h1>
@@ -59,44 +59,59 @@
       <!-- Menu Navigasi -->
       <div class="row p-3 bg-secondary text-white">
         <div class="col">
-
+          <!-- Elemen tambahan bisa ditambahkan di sini -->
         </div>
         <div class="col-auto">
-          <ul class="d-flex list-unstyled mb-0 ms-auto">
+          <ul class="d-flex list-unstyled mb-0">
             <li class="me-3">
               <NuxtLink to="/" class="nav-link text-white">Home</NuxtLink>
             </li>
-            <li class="me-3">
-              <NuxtLink to="/profile" class="nav-link text-white">Profil Sekolah</NuxtLink>
+            <li class="me-3 dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="profilDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Profil
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="profilDropdown">
+                <li><NuxtLink to="/profile" class="dropdown-item">Profile Sekolah</NuxtLink></li>
+                <li><NuxtLink to="/visimisi" class="dropdown-item">Visi & Misi</NuxtLink></li>
+                <li><NuxtLink to="/strukture" class="dropdown-item">Struktur</NuxtLink></li>
+                <li><NuxtLink to="/berita" class="dropdown-item">Berita</NuxtLink></li>
+              </ul>
             </li>
-            <li class="me-3">
-              <NuxtLink to="/fasilitas" class="nav-link text-white">Ekstrakurikuler</NuxtLink>
+            <li class="me-3 ">
+              <NuxtLink to="/strukture" class="nav-link text-white">Struktur</NuxtLink>
             </li>
-            <li class="me-3">
-              <NuxtLink to="/Strukture" class="nav-link text-white">Strukture</NuxtLink>
+            <li class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Action
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="actionDropdown">
+                <li><NuxtLink to="/fasilitas" class="dropdown-item">Fasilitas</NuxtLink></li>
+              </ul>
             </li>
-            <!-- <li class="me-3">
-              
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  Action
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
-            </li> -->
           </ul>
         </div>
       </div>
     </div>
   </template>
   
-  
-
-
   <style>
-</style>
+  /* Menghilangkan margin pada dropdown menu */
+  .dropdown-menu {
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  /* Menjaga elemen dropdown sejajar */
+  .d-flex  {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Responsif untuk logo */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  </style>
   
